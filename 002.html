@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with jQuery events</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="001.css">
+
+</head>
+<body>
+<header>
+    <h1>Hello World!</h1>
+</header>
+<div id="container">
+
+
+    <input type="button" id="btn1" value="button1">
+    <input type="button" class="btn2" value="button2">
+
+    <p id="para1">This is paragraph number one.
+        <span>Hello again</span>
+        This is paragraph number one again.
+    </p>
+
+    <!--<h1 id="coords"></h1>-->
+    <form>
+        <label>Name</label><br>
+        <input title="name" type="text" id="name" name="name"><br>
+        <label>Email</label><br>
+        <input title="email" type="email" id="email" name="email"><br>
+        <label>Gender</label><br>
+        <select title="gender" id="gender" name="gender">
+            <option value="Male">Male</option>
+             <option value="Female">Female</option>
+        </select><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        /*
+        $("#para1").hide();
+
+        $("#btn1").click(function() {
+           $("#para1").toggle();
+         });
+
+        $("#para1").hide();
+
+        $("#btn1").click(function() {
+           $("#para1").toggle();
+         });
+
+        $("#btn1").hover(function() {
+            $("#para1").toggle();
+        });
+
+        $("#btn1").mouseenter(function() {
+            $("#para1").toggle();
+        });
+        $("#btn1").mouseleave(function() {
+            $("#para1").toggle();
+        });
+
+        $("#btn1").mousemove(function() {
+            $("#para1").toggle();
+        });
+
+        $("#btn1").on("mouseup",function() {
+            $("#para1").toggle();
+        });
+        $("#btn1").on('mousedown',function() {
+            $("#para1").toggle();
+        });
+
+        $("#btn1").click(function(e) {
+            console.log(e.currentTarget.id);
+        });
+
+        $("#btn1").click(function(e) {
+            console.log(e.currentTarget.outerHTML);
+        });
+
+        $(".btn2").click(function(e) {
+            console.log(e.currentTarget.className);
+        });
+
+        $("#btn1").mousemove(function(e) {
+            console.log("Coords: Y:" +e.clientY+",X: " +e.clientX);
+        });
+
+        $(document).mousemove(function(e) {
+            $("#coords").html(
+            "Coords: Y:" +e.clientY+",X: " +e.clientX);
+        });
+
+        $("input").focus(function(){
+            $(this).css("background", "yellow");
+        });
+        $("input").blur(function(){
+            $(this).css("background", "white");
+        });
+
+        $("input").keyup(function(e){
+            console.log(e.target.value);
+        });
+
+        $("select#gender").change(function(e){
+            console.log(e.target.value);
+        });
+
+        $("form").submit(function(e){
+          console.log("submitted");
+            e.preventDefault();
+        });
+
+        $("input").focus(function(){
+
+            $(this).css("border-color", "blue");
+            $(this).css("box-shadow", "10px 10px 5px blue");
+
+        });
+          */
+
+
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

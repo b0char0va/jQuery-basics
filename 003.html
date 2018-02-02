@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with jQuery DOM manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="001.css">
+
+</head>
+<body>
+<header>
+    <h1>Hello World!</h1>
+</header>
+<div id="container">
+
+    <button id="btn1">Button 1</button>
+
+    <p id="para1">This is paragraph number one.</p>
+    <p id="para2">This is paragraph number two.</p>
+
+    <input type="text" id="box">
+
+<div id="myDiv"></div>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+
+    </ul>
+    <a href="https://www.google.co.uk">Google</a>
+</div>
+<script>
+    $(document).ready(function () {
+        /*
+        $("p#para1").css({color: "red", background: "grey" });
+
+       $("p#para1").addClass("myClass");
+        $("p#para1").removeClass("myClass");
+        $("#btn1").click(function(){
+            $("p#para1").toggleClass("myClass");
+        });
+        $("#myDiv").text("hello world!");
+
+        $("#myDiv").html("<h1>hello world!</h1>");
+
+        alert($("#myDiv").text());
+
+        $("#list").append("<li>i am item 5</li>");
+        $("#list").prepend("<li>i am item 5</li>");
+
+        $("#list").appendTo("#para1");
+
+        $("#list").prependTo("#para1");
+
+        $("#list").before("i am before you");
+        $("#list").after("i am after you");
+
+        $("#list").empty();
+        $("#list").detach();
+
+        $("a").attr("target", "_blank");
+        $("a").removeAttr("target");
+
+        $("p").wrap("<h1>");
+
+        $("p").wrapAll("<h1>");
+
+        $("#box").keyup(function (e) {
+            var code=e.which;
+            if(code===13) {
+                e.preventDefault();
+                $("#list").append('<li>'+ e.target.value +'</li>');
+            }
+
+        });
+
+        var array=["item 5", "item 6", "item 7"];
+        $.each(array, function(i, val) {
+            $("#list").append("<li>"+val+"</li>");
+        });
+         */
+
+        var newArray= $("#list").toArray();
+
+        $.each(newArray, function(i, val) {
+           console.log(val.innerHTML);
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
