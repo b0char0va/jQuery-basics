@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with jQuery effects</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="001.css">
+
+</head>
+<body>
+<header>
+    <h1>jQuery</h1>
+</header>
+<div id="container">
+
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <br>
+    <br>
+    <button id="btn4">Button 4</button>
+    <button id="btn5">Button 5</button>
+    <button id="btn6">Button 6</button>
+    <br><br>
+    <button id="btn7">Button Stop</button>
+    <br><br>
+    <div id="box"> <h1>Hello World!</h1></div>
+    <br><br>
+    <button id="btn8">Button 8</button>
+    <button id="btn9">Button 9</button>
+    <button id="btn10">Button 10</button>
+    <br><br>
+    <div id="box2"></div>
+
+</div>
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function(){
+            $("#box").fadeOut(3000, function(){
+                $("#btn1").text("it's gone");
+            });
+
+        });
+        $("#btn2").click(function(){
+            $("#box").fadeIn(3000);
+        });
+
+        $("#btn3").click(function(){
+            $("#box").fadeToggle(3000);
+        });
+        $("#btn4").click(function(){
+            $("#box").slideDown(3000);
+        });
+        $("#btn5").click(function(){
+            $("#box").slideUp(3000);
+        });
+        $("#btn6").click(function(){
+            $("#box").slideToggle(3000);
+        });
+        $("#btn7").click(function(){
+            $("#box").stop(3000);
+        });
+
+        $("#btn8").click(function(){
+            $("#box2").animate({
+                left:500,
+                height: '500px',
+                width:'500px',
+                opacity:'.5',
+            });
+        });
+        $("#btn9").click(function(){
+            $("#box2").animate({
+                left:0,
+                height: '100px',
+                width:'100px',
+                opacity:'1',
+            });
+        });
+        $("#btn10").click(function() {
+            $("#box2").animate({
+                left: 300,
+            });
+            $("#box2").animate({
+                top:300,
+            });
+            $("#box2").animate({
+                left:0,
+                top: 300
+            });
+            $("#box2").animate({
+                left:0,
+                top:0
+            });
+        });
+
+
+
+    });
+
+</script>
+
+</body>
+</html>
